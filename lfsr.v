@@ -5,7 +5,7 @@ always @(posedge clk or negedge rst)
 if(rst==0)
 q<=4'b1101;
 else
-q<={q[2],q[1],q[0],q[0]^q[3]};
+  q<={q[2],q[1],q[0],q[3]^q[2]};
 endmodule
 
 module tb();
